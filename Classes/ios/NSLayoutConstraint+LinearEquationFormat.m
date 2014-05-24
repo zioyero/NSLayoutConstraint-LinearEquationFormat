@@ -76,15 +76,21 @@
 
     // First we ensure that the string is vaguely properly formatted
 
-    NSTextCheckingResult *leftSide = [self stringContainsOneViewAttributeToSet:string];
+    NSTextCheckingResult *leftSide = [self stringContainsLeftSide:string];
     if (leftSide)
     {
         NSString *withRange = [string substringWithRange:leftSide.range];
         view1      = [self view1FromString:withRange];
-        attribute1 = [self attribute1FromString:withRange];
+        attribute1 = [self attributeFromString:withRange];
     }
 
     NSTextCheckingResult *rightSide = [self stringContainsRightSide:string];
+    if (rightSide)
+    {
+        NSString *rightSideString = [string substringWithRange:rightSide.range];
+        view2      = [self view2FromString:rightSideString];
+        attribute2 = [self attributeFromString:rightSideString];
+    }
 
     return nil;
 }
@@ -103,7 +109,7 @@
 
 #pragma mark Parsing
 
-- (NSTextCheckingResult *)stringContainsOneViewAttributeToSet:(NSString *)string
+- (NSTextCheckingResult *)stringContainsLeftSide:(NSString *)string
 {
     NSError             *error;
     NSRegularExpression *regex   = [NSRegularExpression regularExpressionWithPattern:@"[\\w]+.[\\w]+\\s*[=|>=|<=]{1}" options:0 error:&error];
@@ -147,7 +153,37 @@
     return nil;
 }
 
-- (NSNumber *)attribute1FromString:(NSString *)string
+/**
+* Input string is of format '=viewName.attribute...' (aka [=|<=|>=]{1}.*). From this, we want to extract the view name and
+* match it to a view in our viewDict.
+*/
+- (UIView *)view2FromString:(NSString *)string
+{
+    NSError             *error;
+    NSRegularExpression *regex   = [NSRegularExpression regularExpressionWithPattern:@"[\\w]+\\." options:0 error:&error];
+    NSArray             *matches = [regex matchesInString:string options:0 range:NSMakeRange(0, string.length)];
+    if (error)
+    {
+        NSAssert(NO, @"Could not parse view from string '%@'. Error:%@", string, error.localizedDescription);
+    }
+    if (matches.count == 1)
+    {
+        NSTextCheckingResult *result  = matches.firstObject;
+        NSString             *viewKey = [string substringWithRange:NSMakeRange(result.range.location, result.range.length - 1)];
+        UIView               *ret     = self.viewDict[viewKey];
+        if (ret)
+        {
+            return ret;
+        }
+    }
+    return nil;
+}
+
+/**
+* Input string is of format 'viewName.attribute =' (aka [\w]+.[\w]+\s*[=|>=|<=]{1}). From this, we want to extract the attribute name
+* and match it to a layout attribute, wrapped in an NSNumber.
+*/
+- (NSNumber *)attributeFromString:(NSString *)string
 {
     NSError             *error;
     NSRegularExpression *regex   = [NSRegularExpression regularExpressionWithPattern:@"\\.[\\w]+" options:0 error:&error];
@@ -169,8 +205,21 @@
     return nil;
 }
 
+
 - (NSTextCheckingResult *)stringContainsRightSide:(NSString *)string
 {
+    NSError             *error;
+    NSRegularExpression *regex   = [NSRegularExpression regularExpressionWithPattern:@"[=|<=|>=]{1}.*" options:0 error:&error];
+    NSArray             *matches = [regex matchesInString:string options:0 range:NSMakeRange(0, string.length)];
+    if (matches.count == 1)
+    {
+        // We can continue because there is exactly one attribute being set in this string.
+        return matches.firstObject;
+    }
+    else
+    {
+        return nil;
+    }
     return nil;
 }
 

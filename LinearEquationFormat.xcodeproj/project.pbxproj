@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB3CA0A9EA1288AEB720FCCF /* NSLayoutConstraint+LinearEquationFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CADA59C29B81C8F974D5D /* NSLayoutConstraint+LinearEquationFormat.m */; };
+		AB3CA218177279ECFFCC9CFA /* LinearEquationFormatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CABB56DE28D73C9BA4B52 /* LinearEquationFormatTests.m */; };
+		AB3CA28362696E632072B4F5 /* LinearEquationFormat.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AB3CA90407E73519FB46502C /* LinearEquationFormat.h */; };
+		AB3CA308725D74853E02DEEF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3CAE902AC9BAEB9C70E946 /* XCTest.framework */; };
+		AB3CA5D5676C41AC490FC471 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3CAF153913D289B1653015 /* Foundation.framework */; };
+		AB3CA6333DF1A4F57E2F1EEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3CA95BDCD3BB35746A0DC1 /* UIKit.framework */; };
+		AB3CA694282ABE3D7594CB38 /* libLinearEquationFormat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3CACA2922BC305696B3317 /* libLinearEquationFormat.a */; };
+		AB3CA9688603D45051BE1D01 /* LinearEquationFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CA0A73365D53DC79499C0 /* LinearEquationFormat.m */; };
+		AB3CAB3125BDAE1D25DD21CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB3CA1A6B8BBA60167C996D2 /* InfoPlist.strings */; };
+		AB3CAF402D225658FC740BC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB3CAF153913D289B1653015 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB3CA8581393B1454632FC5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB3CA1616B86F945B48C8736 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB3CA0E5C8718924D1A60376;
+			remoteInfo = LinearEquationFormat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AB3CAE2F65A08958FAAE6C8E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				AB3CA28362696E632072B4F5 /* LinearEquationFormat.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AB3CA0A73365D53DC79499C0 /* LinearEquationFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinearEquationFormat.m; sourceTree = "<group>"; };
+		AB3CA0AE3299F46DF23DE60F /* NSLayoutConstraint+LinearEquationFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+LinearEquationFormat.h"; sourceTree = "<group>"; };
+		AB3CA1525E60256367575C73 /* LinearEquationFormat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LinearEquationFormat-Prefix.pch"; sourceTree = "<group>"; };
+		AB3CA3B5E7A708970B304003 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AB3CA5E9EF7244B5D91342F7 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = file.gitkeep; path = .gitkeep; sourceTree = "<group>"; };
+		AB3CA7B5851EDFBA1582EE85 /* LinearEquationFormatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "LinearEquationFormatTests-Info.plist"; sourceTree = "<group>"; };
+		AB3CA8E5FBEC4D796D2EABC4 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = file.gitkeep; path = .gitkeep; sourceTree = "<group>"; };
+		AB3CA90407E73519FB46502C /* LinearEquationFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinearEquationFormat.h; sourceTree = "<group>"; };
+		AB3CA95BDCD3BB35746A0DC1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AB3CABB56DE28D73C9BA4B52 /* LinearEquationFormatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinearEquationFormatTests.m; sourceTree = "<group>"; };
+		AB3CACA2922BC305696B3317 /* libLinearEquationFormat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLinearEquationFormat.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB3CADA59C29B81C8F974D5D /* NSLayoutConstraint+LinearEquationFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+LinearEquationFormat.m"; sourceTree = "<group>"; };
+		AB3CADB1DD0909998EBDD6EF /* LinearEquationFormatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinearEquationFormatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB3CAE902AC9BAEB9C70E946 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AB3CAF153913D289B1653015 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB3CA2500995CCB80410683A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB3CA308725D74853E02DEEF /* XCTest.framework in Frameworks */,
+				AB3CAF402D225658FC740BC4 /* Foundation.framework in Frameworks */,
+				AB3CA6333DF1A4F57E2F1EEB /* UIKit.framework in Frameworks */,
+				AB3CA694282ABE3D7594CB38 /* libLinearEquationFormat.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB3CAA7A7FDAD73E23ED686D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB3CA5D5676C41AC490FC471 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB3CA0C4233F67CBD458EAC5 = {
+			isa = PBXGroup;
+			children = (
+				AB3CABB2D56F0059C2B455A7 /* Products */,
+				AB3CA65AFE499898C00991B2 /* Frameworks */,
+				AB3CA4B3F98B71DB3FA355F1 /* LinearEquationFormat */,
+				AB3CADAEBAE4E800B995F4F4 /* LinearEquationFormatTests */,
+			);
+			sourceTree = "<group>";
+		};
+		AB3CA39AF090BEAE5CB1CA32 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CA7B5851EDFBA1582EE85 /* LinearEquationFormatTests-Info.plist */,
+				AB3CA1A6B8BBA60167C996D2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB3CA47137E7976E80B8F768 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CA8E5FBEC4D796D2EABC4 /* .gitkeep */,
+				AB3CADA59C29B81C8F974D5D /* NSLayoutConstraint+LinearEquationFormat.m */,
+				AB3CA0AE3299F46DF23DE60F /* NSLayoutConstraint+LinearEquationFormat.h */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		AB3CA4B3F98B71DB3FA355F1 /* LinearEquationFormat */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CAAC2E8D23BE43917DC71 /* Supporting Files */,
+				AB3CA90407E73519FB46502C /* LinearEquationFormat.h */,
+				AB3CA0A73365D53DC79499C0 /* LinearEquationFormat.m */,
+				AB3CA71C5E97A73DC7E95A8D /* Classes */,
+			);
+			path = LinearEquationFormat;
+			sourceTree = "<group>";
+		};
+		AB3CA63CC39ED9C1F55DA95D /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CA5E9EF7244B5D91342F7 /* .gitkeep */,
+			);
+			path = osx;
+			sourceTree = "<group>";
+		};
+		AB3CA65AFE499898C00991B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CAF153913D289B1653015 /* Foundation.framework */,
+				AB3CAE902AC9BAEB9C70E946 /* XCTest.framework */,
+				AB3CA95BDCD3BB35746A0DC1 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB3CA71C5E97A73DC7E95A8D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CA47137E7976E80B8F768 /* ios */,
+				AB3CA63CC39ED9C1F55DA95D /* osx */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		AB3CAAC2E8D23BE43917DC71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CA1525E60256367575C73 /* LinearEquationFormat-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB3CABB2D56F0059C2B455A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CACA2922BC305696B3317 /* libLinearEquationFormat.a */,
+				AB3CADB1DD0909998EBDD6EF /* LinearEquationFormatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB3CADAEBAE4E800B995F4F4 /* LinearEquationFormatTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CA39AF090BEAE5CB1CA32 /* Supporting Files */,
+				AB3CABB56DE28D73C9BA4B52 /* LinearEquationFormatTests.m */,
+			);
+			path = LinearEquationFormatTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB3CA0E5C8718924D1A60376 /* LinearEquationFormat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB3CAF04988A6DB9DCEC1F2F /* Build configuration list for PBXNativeTarget "LinearEquationFormat" */;
+			buildPhases = (
+				AB3CA9D566C5DE655A0E3393 /* Sources */,
+				AB3CAA7A7FDAD73E23ED686D /* Frameworks */,
+				AB3CAE2F65A08958FAAE6C8E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LinearEquationFormat;
+			productName = LinearEquationFormat;
+			productReference = AB3CACA2922BC305696B3317 /* libLinearEquationFormat.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AB3CAE6B9E298C3C60FD2EE0 /* LinearEquationFormatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB3CA3481ED3B1F338EF1879 /* Build configuration list for PBXNativeTarget "LinearEquationFormatTests" */;
+			buildPhases = (
+				AB3CA6CBF61ACE3A60D09B11 /* Sources */,
+				AB3CA2500995CCB80410683A /* Frameworks */,
+				AB3CAD9F421EC0D28EDB6606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB3CA466B6AED0C4B7D2BB20 /* PBXTargetDependency */,
+			);
+			name = LinearEquationFormatTests;
+			productName = LinearEquationFormatTests;
+			productReference = AB3CADB1DD0909998EBDD6EF /* LinearEquationFormatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB3CA1616B86F945B48C8736 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Adrian Castillejos";
+			};
+			buildConfigurationList = AB3CAED95DC0CE43BF70E56A /* Build configuration list for PBXProject "LinearEquationFormat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AB3CA0C4233F67CBD458EAC5;
+			productRefGroup = AB3CABB2D56F0059C2B455A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB3CA0E5C8718924D1A60376 /* LinearEquationFormat */,
+				AB3CAE6B9E298C3C60FD2EE0 /* LinearEquationFormatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB3CAD9F421EC0D28EDB6606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB3CAB3125BDAE1D25DD21CE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB3CA6CBF61ACE3A60D09B11 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB3CA218177279ECFFCC9CFA /* LinearEquationFormatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB3CA9D566C5DE655A0E3393 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB3CA9688603D45051BE1D01 /* LinearEquationFormat.m in Sources */,
+				AB3CA0A9EA1288AEB720FCCF /* NSLayoutConstraint+LinearEquationFormat.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB3CA466B6AED0C4B7D2BB20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB3CA0E5C8718924D1A60376 /* LinearEquationFormat */;
+			targetProxy = AB3CA8581393B1454632FC5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AB3CA1A6B8BBA60167C996D2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB3CA3B5E7A708970B304003 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB3CA07BC6B5E9E4095A12AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/LinearEquationFormat.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LinearEquationFormat/LinearEquationFormat-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AB3CA0B0670B40D77BA25BFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AB3CA2F00475754584031800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/LinearEquationFormat.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LinearEquationFormat/LinearEquationFormat-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AB3CA808DA336437161FEFE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB3CADE56834DD83121AAF61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LinearEquationFormat/LinearEquationFormat-Prefix.pch";
+				INFOPLIST_FILE = "LinearEquationFormatTests/LinearEquationFormatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AB3CAE57ED1A7C5FABEAC9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LinearEquationFormat/LinearEquationFormat-Prefix.pch";
+				INFOPLIST_FILE = "LinearEquationFormatTests/LinearEquationFormatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB3CA3481ED3B1F338EF1879 /* Build configuration list for PBXNativeTarget "LinearEquationFormatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB3CADE56834DD83121AAF61 /* Debug */,
+				AB3CAE57ED1A7C5FABEAC9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AB3CAED95DC0CE43BF70E56A /* Build configuration list for PBXProject "LinearEquationFormat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB3CA0B0670B40D77BA25BFF /* Debug */,
+				AB3CA808DA336437161FEFE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB3CAF04988A6DB9DCEC1F2F /* Build configuration list for PBXNativeTarget "LinearEquationFormat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB3CA2F00475754584031800 /* Debug */,
+				AB3CA07BC6B5E9E4095A12AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB3CA1616B86F945B48C8736 /* Project object */;
+}

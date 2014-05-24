@@ -27,6 +27,8 @@
 
 @implementation ZIOLayoutConstraintManager
 
+#pragma mark Initialization
+
 - (instancetype)init
 {
     self = [super init];
@@ -71,16 +73,22 @@
     UIView   *view1, *view2;
     NSNumber *attribute1, *attribute2, *relation, *multiplier, *constant;
     NSString             *name;
+
     // First we ensure that the string is vaguely properly formatted
+
     NSTextCheckingResult *leftSide = [self stringContainsOneViewAttributeToSet:string];
     if (leftSide)
     {
-        view1 = [self view1FromString:[string substringWithRange:leftSide.range]];
+        NSString *withRange = [string substringWithRange:leftSide.range];
+        view1      = [self view1FromString:withRange];
+        attribute1 = [self attribute1FromString:withRange];
     }
 
+    NSTextCheckingResult *rightSide = [self stringContainsRightSide:string];
 
     return nil;
 }
+
 
 - (NSArray *)constraintsWithStrings:(NSArray *)strings metrics:(NSDictionary *)metricDict views:(NSDictionary *)viewDict
 {
@@ -93,11 +101,13 @@
     return ret;
 }
 
+#pragma mark Parsing
+
 - (NSTextCheckingResult *)stringContainsOneViewAttributeToSet:(NSString *)string
 {
     NSError             *error;
     NSRegularExpression *regex   = [NSRegularExpression regularExpressionWithPattern:@"[\\w]+.[\\w]+\\s*[=|>=|<=]{1}" options:0 error:&error];
-    NSArray             *matches = [regex matchesInString:string options:nil range:NSMakeRange(0, string.length)];
+    NSArray *matches = [regex matchesInString:string options:0 range:NSMakeRange(0, string.length)];
     if (matches.count == 1)
     {
         // We can continue because there is exactly one attribute being set in this string.
@@ -117,8 +127,8 @@
 - (UIView *)view1FromString:(NSString *)string
 {
     NSError             *error;
-    NSRegularExpression *regex   = [NSRegularExpression regularExpressionWithPattern:@"[\\w]+\\." options:nil error:&error];
-    NSArray             *matches = [regex matchesInString:string options:nil range:NSMakeRange(0, string.length)];
+    NSRegularExpression *regex   = [NSRegularExpression regularExpressionWithPattern:@"[\\w]+\\." options:0 error:&error];
+    NSArray             *matches = [regex matchesInString:string options:0 range:NSMakeRange(0, string.length)];
     if (error)
     {
         NSLog(@"Could not parse view from string %@. Error:%@", string, error.localizedDescription);
@@ -136,6 +146,35 @@
     }
     return nil;
 }
+
+- (NSNumber *)attribute1FromString:(NSString *)string
+{
+    NSError             *error;
+    NSRegularExpression *regex   = [NSRegularExpression regularExpressionWithPattern:@"\\.[\\w]+" options:0 error:&error];
+    NSArray             *matches = [regex matchesInString:string options:0 range:NSMakeRange(0, string.length)];
+    if (error)
+    {
+        NSAssert(NO, @"Attribute could not be parsed");
+    }
+    if (matches.count == 1)
+    {
+        NSTextCheckingResult *results      = matches.firstObject;
+        NSString             *attributeKey = [string substringWithRange:NSMakeRange(results.range.location + 1, results.range.length - 1)];
+        NSNumber             *ret          = [ZIOLayoutConstraintManager attributes][attributeKey];
+        if (ret)
+        {
+            return ret;
+        }
+    }
+    return nil;
+}
+
+- (NSTextCheckingResult *)stringContainsRightSide:(NSString *)string
+{
+    return nil;
+}
+
+#pragma mark Store-Bought (Pre-Baked?)
 
 + (NSDictionary *)attributes
 {

@@ -31,7 +31,7 @@
 - (void)testExample
 {
     NSArray *constraints = [NSLayoutConstraint constraintsWithLinearEquationFormat:@[
-            @"view1.attribute = view2.attribute"
+            @"view1.top = view2.bottom"
     ]                                                                      metrics:nil views:@{
             @"view1" : [[UIView alloc] init], @"view2" : [[UIView alloc] init]
     }];

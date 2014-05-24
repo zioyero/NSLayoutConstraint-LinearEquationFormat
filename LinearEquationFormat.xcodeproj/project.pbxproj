@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A694E931931341A009BF9FE /* NSLayoutConstraint+LinearEquationFormat.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AB3CA0AE3299F46DF23DE60F /* NSLayoutConstraint+LinearEquationFormat.h */; };
 		AB3CA0A9EA1288AEB720FCCF /* NSLayoutConstraint+LinearEquationFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CADA59C29B81C8F974D5D /* NSLayoutConstraint+LinearEquationFormat.m */; };
 		AB3CA218177279ECFFCC9CFA /* LinearEquationFormatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CABB56DE28D73C9BA4B52 /* LinearEquationFormatTests.m */; };
 		AB3CA28362696E632072B4F5 /* LinearEquationFormat.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AB3CA90407E73519FB46502C /* LinearEquationFormat.h */; };
@@ -36,6 +37,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				3A694E931931341A009BF9FE /* NSLayoutConstraint+LinearEquationFormat.h in CopyFiles */,
 				AB3CA28362696E632072B4F5 /* LinearEquationFormat.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,10 +67,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3CA694282ABE3D7594CB38 /* libLinearEquationFormat.a in Frameworks */,
 				AB3CA308725D74853E02DEEF /* XCTest.framework in Frameworks */,
 				AB3CAF402D225658FC740BC4 /* Foundation.framework in Frameworks */,
 				AB3CA6333DF1A4F57E2F1EEB /* UIKit.framework in Frameworks */,
-				AB3CA694282ABE3D7594CB38 /* libLinearEquationFormat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +223,11 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = "Adrian Castillejos";
+				TargetAttributes = {
+					AB3CAE6B9E298C3C60FD2EE0 = {
+						TestTargetID = AB3CA0E5C8718924D1A60376;
+					};
+				};
 			};
 			buildConfigurationList = AB3CAED95DC0CE43BF70E56A /* Build configuration list for PBXProject "LinearEquationFormat" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -393,6 +400,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LinearEquationFormat/LinearEquationFormat-Prefix.pch";
 				INFOPLIST_FILE = "LinearEquationFormatTests/LinearEquationFormatTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -408,6 +421,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LinearEquationFormat/LinearEquationFormat-Prefix.pch";
 				INFOPLIST_FILE = "LinearEquationFormatTests/LinearEquationFormatTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -423,6 +442,7 @@
 				AB3CAE57ED1A7C5FABEAC9CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB3CAED95DC0CE43BF70E56A /* Build configuration list for PBXProject "LinearEquationFormat" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +460,7 @@
 				AB3CA07BC6B5E9E4095A12AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

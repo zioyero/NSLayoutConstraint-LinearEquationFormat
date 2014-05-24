@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <UIKit/UIKit.h>
+#import "NSLayoutConstraint+LinearEquationFormat.h"
 
 @interface LinearEquationFormatTests : XCTestCase
 
@@ -28,7 +30,13 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSArray *constraints = [NSLayoutConstraint constraintsWithLinearEquationFormat:@[
+            @"view1.attribute = view2.attribute"
+    ]                                                                      metrics:nil views:@{
+            @"view1" : [[UIView alloc] init], @"view2" : [[UIView alloc] init]
+    }];
+    XCTAssert(constraints.count > 0);
 }
+
 
 @end

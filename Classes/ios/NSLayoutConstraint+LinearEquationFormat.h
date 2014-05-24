@@ -8,8 +8,8 @@
 
 @interface NSLayoutConstraint (LinearEquationFormat)
 
-- (NSArray *)constraintsWithLinearEquationFormat:(NSArray *)linearEquations metrics:(NSDictionary *)metricDict views:(NSDictionary *)viewDict;
++ (NSArray *)constraintsWithLinearEquationFormat:(NSArray *)linearEquations metrics:(NSDictionary *)metricDict views:(NSDictionary *)viewDict;
 
-- (NSLayoutConstraint *)constraintWithLinearEquationFormat:(NSString *)linearEquation metrics:(NSDictionary *)metricDict views:(NSDictionary *)viewDict;
++ (NSLayoutConstraint *)constraintWithLinearEquationFormat:(NSString *)linearEquation metrics:(NSDictionary *)metricDict views:(NSDictionary *)viewDict;
 
 @end
